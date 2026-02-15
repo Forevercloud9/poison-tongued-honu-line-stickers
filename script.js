@@ -56,7 +56,7 @@ document.addEventListener('DOMContentLoaded', () => {
         // Change text
         const newQuote = getRandomQuote();
         quoteElement.style.opacity = 0;
-        
+
         setTimeout(() => {
             quoteElement.textContent = newQuote;
             quoteElement.style.opacity = 1;
@@ -71,4 +71,35 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Add CSS transition for opacity
     quoteElement.style.transition = "opacity 0.2s ease-in-out";
+
+    // View More button functionality
+    const viewMoreBtn = document.getElementById('viewMoreBtn');
+    const hiddenStickers = document.querySelectorAll('.hidden-sticker');
+    let isExpanded = false;
+
+    viewMoreBtn.addEventListener('click', () => {
+        isExpanded = !isExpanded;
+
+        hiddenStickers.forEach((sticker, index) => {
+            if (isExpanded) {
+                // Show stickers with staggered animation
+                setTimeout(() => {
+                    sticker.classList.add('visible');
+                }, index * 30);
+            } else {
+                // Hide stickers
+                sticker.classList.remove('visible');
+            }
+        });
+
+        // Update button text
+        viewMoreBtn.textContent = isExpanded ? 'Show less' : 'View more...';
+
+        // Scroll to show new content if expanding
+        if (isExpanded) {
+            setTimeout(() => {
+                viewMoreBtn.scrollIntoView({ behavior: 'smooth', block: 'end' });
+            }, hiddenStickers.length * 30);
+        }
+    });
 });

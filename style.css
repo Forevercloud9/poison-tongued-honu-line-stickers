@@ -75,7 +75,7 @@ h1 {
 .main-visual {
     width: 100%;
     height: auto;
-    filter: drop-shadow(0 10px 15px rgba(0,0,0,0.2));
+    filter: drop-shadow(0 10px 15px rgba(0, 0, 0, 0.2));
 }
 
 .floating {
@@ -83,9 +83,17 @@ h1 {
 }
 
 @keyframes float {
-    0% { transform: translatey(0px); }
-    50% { transform: translatey(-20px); }
-    100% { transform: translatey(0px); }
+    0% {
+        transform: translatey(0px);
+    }
+
+    50% {
+        transform: translatey(-20px);
+    }
+
+    100% {
+        transform: translatey(0px);
+    }
 }
 
 .hero-text h2 {
@@ -97,19 +105,20 @@ h1 {
 .btn-store {
     display: inline-block;
     padding: 15px 30px;
-    background-color: #00B900; /* LINE Green */
+    background-color: #00B900;
+    /* LINE Green */
     color: white;
     text-decoration: none;
     font-weight: bold;
     border-radius: 50px;
     margin-top: 20px;
     transition: transform 0.2s, box-shadow 0.2s;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .btn-store:hover {
     transform: translateY(-2px);
-    box-shadow: 0 6px 10px rgba(0,0,0,0.15);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
 }
 
 .note {
@@ -125,7 +134,7 @@ h1 {
     border-radius: 20px;
     text-align: center;
     margin-bottom: 60px;
-    box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
 }
 
 .quote-bubble {
@@ -190,12 +199,52 @@ h1 {
     height: auto;
 }
 
+/* Hidden stickers - initially hidden */
+.hidden-sticker {
+    display: none;
+    opacity: 0;
+    transform: scale(0.8);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+/* Show hidden stickers when visible class is added */
+.hidden-sticker.visible {
+    display: block;
+    opacity: 1;
+    transform: scale(1);
+}
+
+/* View More button */
+.view-more-btn {
+    margin-top: 30px;
+    padding: 12px 30px;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: white;
+    border: none;
+    border-radius: 25px;
+    font-size: 1rem;
+    font-weight: bold;
+    font-family: var(--font-main);
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.view-more-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.view-more-btn:active {
+    transform: translateY(0);
+}
+
 /* About */
 .about {
     text-align: center;
     max-width: 600px;
     margin: 0 auto;
-    background: rgba(255,255,255,0.5);
+    background: rgba(255, 255, 255, 0.5);
     padding: 30px;
     border-radius: 20px;
 }
@@ -221,10 +270,12 @@ footer {
         justify-content: center;
         text-align: left;
     }
+
     .hero-image-container {
         margin-right: 50px;
         margin-bottom: 0;
     }
+
     .hero-text {
         align-items: flex-start;
     }
