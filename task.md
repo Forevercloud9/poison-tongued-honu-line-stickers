@@ -1,0 +1,26 @@
+# Poison-tongued Honu LINE Stamp Project
+
+- [x] Verify Art Style <!-- id: 0 -->
+    - [x] Check existing directory (empty) <!-- id: 1 -->
+    - [x] Generate sample image (deadpan Honu with sunglasses) <!-- id: 2 -->
+    - [x] Get user approval on style <!-- id: 3 -->
+    - [x] Update sample to meet LINE requirements (transparent background, 370x320px) <!-- id: 12 -->
+    - [x] Re-verify Style (Busakawa v2) <!-- id: 22 -->
+        - [x] Generate "Funny-Cute" samples (approved implicitly) <!-- id: 25 -->
+- [x] Brainstorm/Finalize Sticker Concepts <!-- id: 4 -->
+    - [x] Review and finalize sticker list (40 items provided by user) <!-- id: 16 -->
+- [x] Implementation & Generation <!-- id: 7 -->
+    - [x] Locate Japanese font (Hiragino) <!-- id: 17 -->
+    - [x] Update script to add text to images <!-- id: 18 -->
+    - [x] Generate Batch 1-9 (IDs 01-40) <!-- id: 31 -->
+- [x] Finalize and Organize <!-- id: 10 -->
+    - [x] Move and Rename files to project directory <!-- id: 57 -->
+        - [x] Create finalize script (rename to 01..40.png, gen main/tab) <!-- id: 58 -->
+        - [x] Execute completion <!-- id: 59 -->
+    - [x] **Fix Inconsistent Stickers** <!-- id: 60 -->
+        - [x] Create 'Updated' folder <!-- id: 61 -->
+        - [x] Regenerate (03, 04, 11, 12, 14, 17, 39) <!-- id: 62 -->
+            - [x] Generate Images (11 pending) <!-- id: 63 -->
+            - [x] Process & Text <!-- id: 64 -->
+            - [x] Move to 'Updated' <!-- id: 65 -->
+            - [x] Overwrite 'completed_set' <!-- id: 66 -->
